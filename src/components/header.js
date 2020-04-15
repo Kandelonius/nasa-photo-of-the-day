@@ -2,7 +2,11 @@ import React from "react";
 import SearchBar from "./searchBar"
 
 const HeaderSection = () => {
-    return null
+    return (
+        <div>
+            <SearchBar />
+        </div>
+    )
 }
 
 export default HeaderSection;

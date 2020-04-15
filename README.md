@@ -114,7 +114,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 
  ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
-
+<!----------first day of the project 150101---------->
 {
   "copyright":"ScottAspinall",
   "date":"2020-04-15",

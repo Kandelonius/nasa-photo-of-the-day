@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const SearchBar = () => {
     return (
       <div className="search-bar-wrapper">
-        <div className="social">
-        </div>
+          {console.log("let's search")}
         <form className="search-form">
           <input
             type="text"
             placeholder="Search"
           />
         </form>
-        <div className="social-wrapper">
-        </div>
+        
       </div>
     );
   };
