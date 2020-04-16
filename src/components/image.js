@@ -1,12 +1,13 @@
 import React from "react";
 
 const ImageSection = (props) => {
+    const altText = `{props}`
     return (
     <div className="NASA-image-wrapper">
-        {console.log("props in image "+props)}
+        {/* {console.log("props in image "+props)} */}
         <img
-          alt="post thumbnail"
-          className="{props.imageTitle}"
+          alt="altText"
+          className="NASA-image"
           src={props.imageUrl}
         />
       </div>)

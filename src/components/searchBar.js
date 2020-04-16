@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
       <div className="search-bar-wrapper">
-          {/* {console.log("let's search")} */}
+          <p>Enter a date to see that date's image</p>
         <form className="search-form">
           <input
             type="text"
             placeholder="YYYY-MM-DD format"
           />
         </form>
-        
+        <p>{`This image date ${props.mediaDate}`}</p>
       </div>
     );
   };

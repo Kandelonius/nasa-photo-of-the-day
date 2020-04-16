@@ -11,27 +11,33 @@ const api_key = '5NL35nUXsW9hb8Aehzb3F0zSZl84RckM1vLfZgbu' // use in the query s
 function App(props) {
   const [date, setDate] = useState('')
   const [imageUrl, setImageUrl] = useState(null)
+  const [hdImageUrl, setHdImageUrl] = useState(null)
   const [description, setDescription] = useState('')
   const [title, setTitle] = useState('')
+  
   useEffect(() => {
+    // console.log('how many times do I happen?')
     axios.get(`${url}?api_key=${api_key}${date}`)
     .then(res =>{
       setTitle(res.data.title)
+      setDate(res.data.date)
       setDescription(res.data.explanation)
       setImageUrl(res.data.url)
-      console.log(res.data.title)
+      setHdImageUrl(res.data.hdurl)
+      // console.log(res.data.title)
     })
     .catch(err => {
+      console.log(err)
       debugger
     })
     },
-  ) 
+  []);
 
   return (
     <div className="App">
-      <HeaderSection imageTitle={title}/>
+      <HeaderSection imageTitle={title} mediaDate={date}/>
       <ImageSection imageUrl={imageUrl} imageTitle={title}/>
-      <Description imageDescription={description}/>
+      <Description imageDescription={description} hdImageUrl={hdImageUrl}/>
     </div>
   );
 }

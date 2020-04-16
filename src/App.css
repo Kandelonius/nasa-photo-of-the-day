@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: lightcyan;
 }
 
 .App-logo {
@@ -23,7 +24,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.NASA-image{
+  width:80%;
+  border:6px solid darkcyan;
+}
+.descriptionClass{
+  width:80%;
+  margin:0 auto;
+}
 .App-link {
   color: #61dafb;
 }
