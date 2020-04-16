@@ -10,7 +10,7 @@ const api_key = '5NL35nUXsW9hb8Aehzb3F0zSZl84RckM1vLfZgbu' // use in the query s
 
 function App(props) {
   const [date, setDate] = useState('')
-  // const [image, setImage] = useState(null)
+  const [imageUrl, setImageUrl] = useState(null)
   const [description, setDescription] = useState('')
   const [title, setTitle] = useState('')
   useEffect(() => {
@@ -18,6 +18,7 @@ function App(props) {
     .then(res =>{
       setTitle(res.data.title)
       setDescription(res.data.explanation)
+      setImageUrl(res.data.url)
       console.log(res.data.title)
     })
     .catch(err => {
@@ -29,7 +30,7 @@ function App(props) {
   return (
     <div className="App">
       <HeaderSection imageTitle={title}/>
-      <ImageSection />
+      <ImageSection imageUrl={imageUrl} imageTitle={title}/>
       <Description imageDescription={description}/>
     </div>
   );
