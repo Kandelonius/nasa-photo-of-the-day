@@ -37,7 +37,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <HeaderSection imageTitle={title} mediaDate={date}/>
+      <HeaderSection imageTitle={title} mediaDate={date} setDate={setDate}/>
       <ImageSection imageUrl={imageUrl} imageTitle={title}/>
       <Description imageDescription={description} hdImageUrl={hdImageUrl}/>
     </div>

@@ -6,7 +6,7 @@ const HeaderSection = (props) => {
         <div className = "header">
             {/* {console.log("props in header"+props)} */}
             <h1 className = "header-title">{props.imageTitle}</h1>
-            <SearchBar mediaDate={props.mediaDate}/>
+            <SearchBar mediaDate={props.mediaDate} setDate={props.setDate}/>
         </div>
     )
 }

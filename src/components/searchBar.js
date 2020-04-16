@@ -6,7 +6,12 @@ const SearchBar = (props) => {
           <p>Enter a date to see that date's image</p>
         <form className="search-form">
           Date: <input
-            type="text"
+            onInput = {event => {
+              props.setDate(event.target.value)
+              // console.log(event)
+              // debugger
+            }}
+            type="date"
             placeholder="YYYY-MM-DD format"
           />
         </form>
