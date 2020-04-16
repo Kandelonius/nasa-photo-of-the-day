@@ -4,6 +4,7 @@ import axios from 'axios'
 import Description from "./components/description"
 import ImageSection from "./components/image"
 import HeaderSection from "./components/header"
+import SearchBar from "./components/searchBar"
 
 const url = 'https://api.nasa.gov/planetary/apod'
 const api_key = '5NL35nUXsW9hb8Aehzb3F0zSZl84RckM1vLfZgbu' // use in the query string 'api_key' https://api.nasa.gov/planetary/apod?api_key=5NL35nUXsW9hb8Aehzb3F0zSZl84RckM1vLfZgbu
@@ -17,8 +18,9 @@ function App(props) {
   
   useEffect(() => {
     // console.log('how many times do I happen?')
-    axios.get(`${url}?api_key=${api_key}${date}`)
+    axios.get(`${url}?api_key=${api_key}&date=${date}`)
     .then(res =>{
+      // console.log(`how many times? ${date}`)
       setTitle(res.data.title)
       setDate(res.data.date)
       setDescription(res.data.explanation)
@@ -31,7 +33,7 @@ function App(props) {
       debugger
     })
     },
-  []);
+  [date]);
 
   return (
     <div className="App">
@@ -43,28 +45,3 @@ function App(props) {
 }
 
 export default App;
-
-  //   useEffect(() => {
-  //     axios.get(`${url}?api_key=${api_key}${date}`)
-  //     .then(res =>{
-  //       console.log(res)
-  //     })
-  //     .catch(err => {
-  //       debugger
-  //     })
-  //     },
-       
-  //       []
-  //     ) 
-  // useEffect(() => {
-  // axios.get(`${url}?api_key=${api_key}${date}`)
-  // .then(res =>{
-  //   console.log(res)
-  // })
-  // .catch(err => {
-  //   debugger
-  // })
-  // },
-   
-  //   []
-  // ) 

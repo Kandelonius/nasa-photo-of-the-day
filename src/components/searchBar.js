@@ -5,7 +5,7 @@ const SearchBar = (props) => {
       <div className="search-bar-wrapper">
           <p>Enter a date to see that date's image</p>
         <form className="search-form">
-          <input
+          Date: <input
             type="text"
             placeholder="YYYY-MM-DD format"
           />
