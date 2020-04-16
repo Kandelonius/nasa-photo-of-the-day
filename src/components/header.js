@@ -1,9 +1,11 @@
 import React from "react";
 import SearchBar from "./searchBar"
 
-const HeaderSection = () => {
+const HeaderSection = (props) => {
     return (
         <div>
+            {/* {console.log("props in header"+props)} */}
+            <h1 className = "header-title">{props.imageTitle}</h1>
             <SearchBar />
         </div>
     )

@@ -10,11 +10,46 @@ const api_key = '5NL35nUXsW9hb8Aehzb3F0zSZl84RckM1vLfZgbu' // use in the query s
 
 function App(props) {
   const [date, setDate] = useState('')
-  const [image, setImage] = useState(null)
+  // const [image, setImage] = useState(null)
   const [description, setDescription] = useState('')
   const [title, setTitle] = useState('')
-
   useEffect(() => {
+    axios.get(`${url}?api_key=${api_key}${date}`)
+    .then(res =>{
+      setTitle(res.data.title)
+      setDescription(res.data.explanation)
+      console.log(res.data.title)
+    })
+    .catch(err => {
+      debugger
+    })
+    },
+  ) 
+
+  return (
+    <div className="App">
+      <HeaderSection imageTitle={title}/>
+      <ImageSection />
+      <Description imageDescription={description}/>
+    </div>
+  );
+}
+
+export default App;
+
+  //   useEffect(() => {
+  //     axios.get(`${url}?api_key=${api_key}${date}`)
+  //     .then(res =>{
+  //       console.log(res)
+  //     })
+  //     .catch(err => {
+  //       debugger
+  //     })
+  //     },
+       
+  //       []
+  //     ) 
+  // useEffect(() => {
   // axios.get(`${url}?api_key=${api_key}${date}`)
   // .then(res =>{
   //   console.log(res)
@@ -22,17 +57,7 @@ function App(props) {
   // .catch(err => {
   //   debugger
   // })
-  },
+  // },
    
-    []
-  ) 
-  return (
-    <div className="App">
-      <HeaderSection />
-      <ImageSection />
-      <Description />
-    </div>
-  );
-}
-
-export default App;
+  //   []
+  // ) 
