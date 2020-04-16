@@ -1,9 +1,10 @@
 import React from "react";
+import styled from 'styled-components'
 
 const SearchBar = (props) => {
     return (
       <div className="search-bar-wrapper">
-          <p>Enter a date to see that date's image</p>
+        <p>Enter a date to see that date's image</p>
         <form className="search-form">
           Date: <input
             onInput = {event => {

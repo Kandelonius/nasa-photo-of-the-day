@@ -25,11 +25,11 @@
   color: white;
 }
 .NASA-image{
-  width:80%;
-  border:6px solid darkcyan;
+  width:100%;
+  border:6px solid #61dafb;
 }
 .descriptionClass{
-  width:80%;
+  width:100%;
   margin:0 auto;
 }
 .App-link {
