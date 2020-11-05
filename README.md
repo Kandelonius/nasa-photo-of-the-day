@@ -1,6 +1,7 @@
+<!--
 # Module Project: Component Side Effects- NASA APOD
 
-This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn. 
+This will be a two-module project. In it you will consume the NASA API to fetch the "Astronomy Photo Of The Day" or APOD. Once you fetch the data, you will build a few components that will render different pieces of data in your interface. After the second module (in the [DAY_TWO_README.md](DAY_TWO_README.md) file) you will re-style your app using one of the libraries you learn.
 
 ## Instructions
 
@@ -114,3 +115,173 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 
  ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+
+first day of the project 150101
+APOD breakdown:
+{
+  "copyright":"ScottAspinall",
+
+  "date":"2020-04-15",
+
+  "explanation":"It was an astronomical triple play. Setting on the left, just after sunset near the end of last month, was our Moon -- showing a bright crescent phase.  Setting on the right was Venus, the brightest planet in the evening sky last month -- and this month, too.  With a small telescope, you could tell that Venus' phase was half, meaning that only half of the planet, as visible from Earth, was exposed to direct sunlight and brightly lit. High above and much further in the distance was the Pleiades star cluster.  Although the Moon and Venus move with respect to the background stars, the Pleiades do not -- because they are background stars. In the beginning of this month, Venus appeared to move right in front of the Pleiades, a rare event that happens only once every eight years.  The featured image captured this cosmic triangle with a series of exposures taken from the same camera over 70 minutes near Avonlea, Saskatchewan, Canada. The positions of the celestial objects was predicted. The only thing unpredicted was the existence of the foreground tree -- and the astrophotographer is still unsure what type of tree that is.",
+
+  "hdurl":"https://apod.nasa.gov/apod/image/2004/MVP_Aspinall_2048.jpg",
+
+  "media_type":"image",
+
+  "service_version":"v1",
+
+  "title":"A Cosmic Triangle",
+
+  "url":"https://apod.nasa.gov/apod/image/2004/MVP_Aspinall_960.jpg"
+}
+
+
+Asteroids-NeoWs breakdown:
+
+{
+  "links":
+  {
+    "next":"http://www.neowsapp.com/rest/v1/feed?start_date=2015-09-08&end_date=2015-09-09&detailed=false&api_key=DEMO_KEY",
+    "prev":"http://www.neowsapp.com/rest/v1/feed?start_date=2015-09-06&end_date=2015-09-07&detailed=false&api_key=DEMO_KEY",
+    "self":"http://www.neowsapp.com/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&detailed=false&api_key=DEMO_KEY"
+  },
+  "element_count":25,
+  "near_earth_objects":
+  {
+    "2015-09-08":
+    [
+    {
+      "links":
+      {
+        "self":"http://www.neowsapp.com/rest/v1/neo/3726710?api_key=DEMO_KEY"
+      },
+      "id":"3726710",
+      "neo_reference_id":"3726710",
+      "name":"(2015 RC)",
+      "nasa_jpl_url":"http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3726710",
+      "absolute_magnitude_h":24.3,
+      "estimated_diameter":
+      {
+        "kilometers":
+        {
+          "estimated_diameter_min":0.0366906138,
+          "estimated_diameter_max":0.0820427065
+        },
+        "meters":
+        {
+          "estimated_diameter_min":36.6906137531,
+          "estimated_diameter_max":82.0427064882
+        },
+        "miles":
+        {
+          "estimated_diameter_min":0.0227984834,
+          "estimated_diameter_max":0.0509789586
+        },
+        "feet":
+        {
+          "estimated_diameter_min":120.3760332259,
+          "estimated_diameter_max":269.1689931548
+        }
+      },
+      "is_potentially_hazardous_asteroid":false,
+      "close_approach_data":
+      [
+      {
+        "close_approach_date":"2015-09-08",
+        "close_approach_date_full":"2015-Sep-08 09:45",
+        "epoch_date_close_approach":1441705500000,
+        "relative_velocity":
+        {
+          "kilometers_per_second":"19.4850295284",
+          "kilometers_per_hour":"70146.106302123",
+          "miles_per_hour":"43586.0625520053"
+        },
+        "miss_distance":
+        {
+          "astronomical":"0.0269230459",
+          "lunar":"10.4730648551",
+          "kilometers":"4027630.320552233",
+          "miles":"2502653.4316094954"
+        },
+        "orbiting_body":"Earth"
+      }
+      ],
+    "is_sentry_object":false
+    },
+    ]
+  }
+}
+
+
+{"photos":
+  [
+  {
+    "id":102693,
+
+    "sol":1000,
+
+    "camera":
+      {
+        "id":20,
+        "name":"FHAZ",
+        "rover_id":5
+        "full_name":"Front Hazard Avoidance Camera"
+      },
+
+    "img_src":"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG",
+
+    "earth_date":"2015-05-30",
+
+    "rover":
+      {
+        "id":5,
+        "name":"Curiosity",
+        "landing_date":"2012-08-06",
+        "launch_date":"2011-11-26",
+        "status":"active",
+        "max_sol":2733,
+        "max_date":"2020-04-14",
+        "total_photos":415644,
+        "cameras":
+          [
+            {
+              "name":"FHAZ",
+              "full_name":"Front Hazard Avoidance Camera"
+            },
+            {
+              "name":"NAVCAM",
+              "full_name":"Navigation Camera"
+            },
+            {
+              "name":"MAST",
+              "full_name":"Mast Camera"
+            },
+            {
+              "name":"CHEMCAM",
+              "full_name":"Chemistry and Camera Complex"
+            },
+            {
+              "name":"MAHLI",
+              "full_name":"Mars Hand Lens Imager"
+            },
+            {
+              "name":"MARDI",
+              "full_name":"Mars Descent Imager"
+            },
+            {
+              "name":"RHAZ",
+              "full_name":"Rear Hazard Avoidance Camera"
+            }
+          ]
+        }
+    },
+
+  {
+    "id":102694,"sol":1000,"camera":{"id":20,"name":"FHAZ","rover_id":5,"full_name":"Front Hazard Avoidance Camera"},"img_src":"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG","earth_date":"2015-05-30","rover":{"id":5,"name":"Curiosity","landing_date":"2012-08-06","launch_date":"2011-11-26","status":"active","max_sol":2733,"max_date":"2020-04-14","total_photos":415644,"cameras":[{"name":"FHAZ","full_name":"Front Hazard Avoidance Camera"},{"name":"NAVCAM","full_name":"Navigation Camera"},{"name":"MAST","full_name":"Mast Camera"},{"name":"CHEMCAM","full_name":"Chemistry and Camera Complex"},{"name":"MAHLI","full_name":"Mars Hand Lens Imager"},{"name":"MARDI","full_name":"Mars Descent Imager"},{"name":"RHAZ","full_name":"Rear Hazard Avoidance Camera"}]}
+    },
+    {
+      "id":102850,"sol":1000,"camera":{"id":21,"name":"RHAZ","rover_id":5,"full_name":"Rear Hazard Avoidance Camera"},"img_src":"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RLB_486265291EDR_F0481570RHAZ00323M_.JPG","earth_date":"2015-05-30","rover":{"id":5,"name":"Curiosity","landing_date":"2012-08-06","launch_date":"2011-11-26","status":"active","max_sol":2733,"max_date":"2020-04-14","total_photos":415644,"cameras":[{"name":"FHAZ","full_name":"Front Hazard Avoidance Camera"},{"name":"NAVCAM","full_name":"Navigation Camera"},{"name":"MAST","full_name":"Mast Camera"},{"name":"CHEMCAM","full_name":"Chemistry and Camera Complex"},{"name":"MAHLI","full_name":"Mars Hand Lens Imager"},{"name":"MARDI","full_name":"Mars Descent Imager"},{"name":"RHAZ","full_name":"Rear Hazard Avoidance Camera"}]}
+      },
+      {
+        "id":102851,"sol":1000,"camera":{"id":21,"name":"RHAZ","rover_id":5,"full_name":"Rear Hazard Avoidance Camera"},"img_src":"http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RRB_486265291EDR_F0481570RHAZ00323M_.JPG","earth_date":"2015-05-30","rover":{"id":5,"name":"Curiosity","landing_date":"2012-08-06","launch_date":"2011-11-26","status":"active","max_sol":2733,"max_date":"2020-04-14","total_photos":415644,"cameras":[{"name":"FHAZ","full_name":"Front Hazard Avoidance Camera"},{"name":"NAVCAM","full_name":"Navigation Camera"},{"name":"MAST","full_name":"Mast Camera"},{"name":"CHEMCAM","full_name":"Chemistry and Camera Complex"},{"name":"MAHLI","full_name":"Mars Hand Lens Imager"},{"name":"MARDI","full_name":"Mars Descent Imager"},{"name":"RHAZ","full_name":"Rear Hazard Avoidance Camera"}]}},{"id":424905,"sol":1000,"camera":{"id":22,"name":"MAST","rover_id":5,"full_name":"Mast Camera"},"img_src":"http://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000MR0044631300503690E01_DXXX.jpg","earth_date":"2015-05-30","rover":{"id":5,"name":"Curiosity","landing_date":"2012-08-06","launch_date":"2011-11-26","status":"active","max_sol":2733,"max_date":"2020-04-14","total_photos -->
